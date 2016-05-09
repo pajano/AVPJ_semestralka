@@ -1,0 +1,97 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: #444;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+a .glyphicon:not(.glyphicon-no-padding) {
+    margin-right: 5px;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.header {
+    padding: 50px 0;
+    background-color: #2A7182;
+}
+
+.header h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.header h2 span {
+    font-size: 0.75em;
+    margin-right: 15px;
+    color: #94b8c0;
+}
+
+.header p {
+    font-size: 1.3em;
+    color: #94b8c0;
+    max-width: 60%;
+}
+
+.admin-panel {
+    padding: 15px 0px;
+    background-color: #19434e;
+}
+
+.admin-panel a {
+    margin-right: 10px;
+}
+
+.admin-panel .admin-panel-title {
+    margin-right: 10px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.content {
+    background-color: #fcfcfc;
+    padding-bottom: 40px;
+}
+
+.content .page-header a {
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.content .page-header h2 {
+    color: #2A7182;
+}
+
+.content .page-header h2 span {
+    margin-right: 10px;
+    font-size: 0.8em;
+    color: #94b8c0;
+}
+
+.content table td .btn {
+    margin-right: 10px;
+}
+
+.content .person-type-selector {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content .person-type-selector select {
+    display: inline-block;
+    width: 200px;
+}

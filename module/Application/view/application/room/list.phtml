@@ -1,0 +1,35 @@
+<div class="col-lg-12">
+    <div class="page-header">
+        <h2><span class="glyphicon glyphicon-list-alt"></span>Zoznam miestností</h2>
+        <a href="<?php echo $this->url('room', array('action' => 'add')); ?>" class="btn btn-info pull-right"><span class="glyphicon glyphicon-plus"></span> Pridať</a>
+    </div>
+    <?php if(isset($this->successMessage) && !empty($this->successMessage)) : ?>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong><?php echo $this->successMessage; ?></strong>
+    </div>
+    <?php endif; ?>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Označenie</th>
+                <th>Názov</th>
+                <th>Určenie</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach((isset($this->rooms)) ? $this->rooms : array() as $room) : ?>
+            <tr>
+                <td><strong><?php echo $room->label; ?></strong></td>
+                <td><?php echo $room->title; ?></td>
+                <td><?php echo $room->designation; ?></td>
+                <td>
+                    <a href="<?php echo $this->url('room', array('action' => 'delete', 'id' => $room->id)); ?>" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-remove glyphicon-no-padding"></span></a>
+                    <a href="<?php echo $this->url('room', array('action' => 'edit', 'id' => $room->id)); ?>" class="btn btn-default pull-right"><span class="glyphicon glyphicon-pencil glyphicon-no-padding"></span></a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

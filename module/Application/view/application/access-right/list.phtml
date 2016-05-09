@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+    <div class="page-header">
+        <h2><span class="glyphicon glyphicon-list-alt"></span>Zoznam prístupových práv</h2>
+    </div>
+    <?php if(isset($this->successMessage) && !empty($this->successMessage)) : ?>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong><?php echo $this->successMessage; ?></strong>
+    </div>
+    <?php endif; ?>
+    
+    <?php
+        $roomsForm = $this->roomsForm;
+        $roomsForm->prepare();
+        echo $this->form()->openTag($roomsForm);
+        echo $this->formElement($roomsForm->get('rooms'));
+        echo $this->form()->closeTag(); 
+    ?>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Pracovník</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach((isset($this->persons)) ? $this->persons : array() as $accessRightId => $person) : ?>
+            <tr>
+                <td><?php echo "$person->titleBefore $person->firstName <strong>$person->lastName</strong>"; echo ($person->titleBehind != "") ? ", $person->titleBehind" : ""; ?></td>
+                <td><?php echo (isset($this->codes[strval($person->id)])) ? $this->codes[strval($person->id)] : ""; ?></td>
+                <td>
+                    <a href="<?php echo $this->url('accessright', array('action' => 'delete', 'id' => $accessRightId)); ?>" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-remove glyphicon-no-padding"></span></a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="form-group">
+    <div class="col-lg-3 control-label">
+        <?php echo $this->formLabel($this->form->get($this->name)); ?>
+    </div>
+    <div class="col-lg-9">
+        <?php echo $this->formElement($this->form->get($this->name)); ?>
+        <div class="has-error">
+            <div class="help-block">
+                <?php echo $this->formElementErrors($this->form->get($this->name)); ?>
+            </div>
+        </div>
+    </div>
+</div>
