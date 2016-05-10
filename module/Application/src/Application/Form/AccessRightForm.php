@@ -11,7 +11,7 @@ namespace Application\Form;
 use Zend\Form\Form;
 
 /**
- * Description of TerminalForm
+ * Description of AccessRightForm
  *
  * @author janpa
  */

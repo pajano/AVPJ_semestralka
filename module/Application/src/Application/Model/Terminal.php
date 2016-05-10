@@ -13,7 +13,7 @@ use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
 
 /**
- * Description of TerminalForm
+ * Description of Terminal
  *
  * @author janpa
  */
